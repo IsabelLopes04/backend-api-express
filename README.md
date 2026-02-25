@@ -10,7 +10,16 @@
 
 - Framework: Conjunto de recursos ou ferramentas para facilitar e agilizar o desenvolvimento de aplicações.
 
-- Como mudar o formato de importação de "require" (padrão comonjs) para "module"
+- Como mudar o formato de importação de "require" (padrão comonjs) para "module": é na opção "type" no package.json
+
+- O que é HTTP? é o protocolo base da World Wide Web, operando como um sistema de requisição-resposta entre um cliente (navegador) e um servidor.
+
+- Quais os metodos de requisição HTTP  e para que serve cada um deles?
+-- GET(PEGAR): É o método mais comum. Você o usa toda vez que digita uma URL no navegador ou clica em um link.
+-- POST(POSTAR): Usado para enviar dados novos para o servidor para que ele crie um novo registro.
+-- PUT(EDITAR): É o comando de "edição completa", para alterar um dado que ja estao na base de dados.
+-- PATCH: Diferente do PUT, o PATCH é "cirúrgico", faz uma edição parcial dos dados.
+-- DELETE: O nome já diz tudo: é o comando para apagar alguma coisa do banco.
 
 - "res": É o que o express me da para responder o usuario 
     
