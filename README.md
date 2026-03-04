@@ -4,9 +4,11 @@
 
 - O que é o Node.js? é o ambiente que roda o JavaScript
 
-- O que é NPM?  NPM (Node Package Manager) = É basicamente o gerenciador de pacotes do Node.js
+- O que é NPM?  NPM (Node Package Manager) = É basicamente o gerenciador de pacotes do Node.js, ele permite adicionar e remover pacotes do projeto
 
-- O que é o express.js? É um framework não opinativo, deixando livre para usar a estrutura dele no projeto.
+- O que é o express.js? É um framework não opinativo, deixando livre para usar a estrutura dele no projeto e construir APIs.
+
+- O que é uma API (Application Programming Interface)? uma interface para o nosso front-end se comunicar com o back-end
 
 - Framework: Conjunto de recursos ou ferramentas para facilitar e agilizar o desenvolvimento de aplicações.
 
@@ -16,17 +18,16 @@
 
 - Quais os metodos de requisição HTTP  e para que serve cada um deles?
 -- GET(PEGAR): É o método mais comum. Você o usa toda vez que digita uma URL no navegador ou clica em um link.
--- POST(POSTAR): Usado para enviar dados novos para o servidor para que ele crie um novo registro.
+-- POST(POSTAR): Usado para inserir dados novos para o servidor para que ele crie um novo registro.
 -- PUT(EDITAR): É o comando de "edição completa", para alterar um dado que ja estao na base de dados.
 -- PATCH: Diferente do PUT, o PATCH é "cirúrgico", faz uma edição parcial dos dados.
 -- DELETE: O nome já diz tudo: é o comando para apagar alguma coisa do banco.
 
 - "res": É o que o express me da para responder o usuario 
-    
+
 - "req": Guarda as informações que chegam da requisição
 
-- "app.get": ROTAS DA API - SÃO ENDEREÇOS QUE VAO FICAR 
-ESCUTANDO OS METODOS 
+- "app.get": ROTAS DA API - SÃO ENDEREÇOS QUE VAO FICAR ESCUTANDO OS METODOS 
     
 - "app.listen": Escutando as requisições para subir o servidor 
 
@@ -53,3 +54,13 @@ para parar o watch de rodar no terminal da o Ctrl + C
 - "Package.json": Funciona como a carteira de identidade do projeto
 
 - "uninstall": Comando para desinstalar um pacote 
+
+- Para que serve o ROUTER do express? Para separar um conjunto de rotas em um arquivo separado com rotas do mesmo end-point
+
+- Web Design = Projeto do Site 
+
+- Padrão de projetos: 
+    MVC (Model-View-Controller) - separar a organizacao das responsabilidades do projeto em 3 camadas
+        MODEL - regra de negocios
+        VIEW - fluxo da aplicação, camada de representaçaõ
+        
