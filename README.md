@@ -61,6 +61,31 @@ para parar o watch de rodar no terminal da o Ctrl + C
 
 - Padrão de projetos: 
     MVC (Model-View-Controller) - separar a organizacao das responsabilidades do projeto em 3 camadas
-        MODEL - regra de negocios
-        VIEW - fluxo da aplicação, camada de representaçaõ
-        
+        MODEL - regra de negocios, acesso a base de dados
+        VIEW - fluxo da aplicação, camada de representação, front-end 
+        CONTROLLER - Controle do fluxo de aplicação (entrada, processamento(lógica) e saida), ele cuida da resposta
+
+- O que é um ORM (Object-Relational-Mapping)? é uma tecnica de desenvolvimento que traduz entre bancos de dados relacionais 
+e lingugagens orientadas a objetos para JavaScript/node.js o mais moderno é o Prima. 
+
+- Quais as vantagens de utilizar um ORM? Trocar de banco de dados
+
+### Comandos do Prisma 
+
+Instalação:
+        - npm i prisma -D
+        - npm i dotenv -D
+
+Comando para iniciar o prisma: 
+        - npx prisma init --datasource-provider mysql --output ../generated/prisma
+
+Gera o banco de dados a partir do esquema do prisma:
+        - npx prisma db push 
+
+Gera do esquema prisma a partir do banco de dados:
+        - npx prisma db pull
+
+Gerar as funções para interagir com os modelos no esquema
+        - npx prisma generate
+
+        - npm install @prisma/client @prisma/adapter-mariadb mariadb
