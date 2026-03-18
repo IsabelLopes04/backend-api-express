@@ -1,3 +1,3 @@
- export function deletePostController(req, res){
+ export function deletePubliController(req, res){
      res.send("Exemplo de DELETE na rota /delete controlada pelo controller!")
  }

@@ -14,7 +14,7 @@
 
 - Como mudar o formato de importação de "require" (padrão comonjs) para "module": é na opção "type" no package.json
 
-- O que é HTTP? é o protocolo base da World Wide Web, operando como um sistema de requisição-resposta entre um cliente (navegador) e um servidor.
+- O que é HTTP? é o protocolo base da World Wide Web, operando como um sistema de requisição-resposta entre um cliente (front) e um servidor(back).
 
 - Quais os metodos de requisição HTTP  e para que serve cada um deles?
 -- GET(PEGAR): É o método mais comum. Você o usa toda vez que digita uma URL no navegador ou clica em um link.
@@ -73,19 +73,27 @@ e lingugagens orientadas a objetos para JavaScript/node.js o mais moderno é o P
 ### Comandos do Prisma 
 
 Instalação:
-        - npm i prisma -D
+        - npm i prisma -D (CLI - Comand Line Interface: comandos de terminal)
         - npm i dotenv -D
 
 Comando para iniciar o prisma: 
         - npx prisma init --datasource-provider mysql --output ../generated/prisma
 
-Gera o banco de dados a partir do esquema do prisma:
+Gerar o banco de dados a partir do esquema do prisma:
         - npx prisma db push 
 
-Gera do esquema prisma a partir do banco de dados:
+Gerar do esquema prisma a partir do banco de dados:
         - npx prisma db pull
 
-Gerar as funções para interagir com os modelos no esquema
+Gerar as funções para interagir com os modelos no esquema:
         - npx prisma generate
 
         - npm install @prisma/client @prisma/adapter-mariadb mariadb
+Abre as tabelas criadas:
+        - npx prisma studio
+
+JSON é uma String que representa um objeto do JavaScript
+        Front - objeto javaScript
+        Request transforma em json
+        Backend transforma em objeto e é manipulado em JavaScript
+

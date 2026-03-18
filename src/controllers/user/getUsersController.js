@@ -1,4 +1,11 @@
+import { getUsers } from "../../models/userModel.js"
 
-export function getUsersController(req, res){
-    res.send("Exemplo de GET na rota /user controlada pelo controller!")
+export async function  getUsersController(req, res){
+
+const  result = await getUsers()
+
+    res.json({
+        Message: "Usuarios listados com sucesso!",
+        Users: result
+    })
 }
