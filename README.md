@@ -31,12 +31,16 @@
         -- PATCH: Diferente do PUT, o PATCH é "cirúrgico", faz uma edição parcial dos dados.
         -- DELETE: O nome já diz tudo: é o comando para apagar alguma coisa do banco.
 
+--------------------
+
 - "res": É o que o express me da para responder o usuario 
 - "req": Guarda as informações que chegam da requisição
 - "app.get": ROTAS DA API - SÃO ENDEREÇOS QUE VAO FICAR ESCUTANDO OS METODOS 
 - "app.listen": Escutando as requisições para subir o servidor 
 - "Start": É o único script que não precisa do comando run
                 Todo script precisa do comando run
+
+--------------------------
 
 - "--watch": Um comando para monitorar/observar alguma coisa em tempo real
         para parar o watch de rodar no terminal da o Ctrl + C
@@ -47,9 +51,13 @@
 - "npm init": Inicializa o projeto criando o package.json
 - "uninstall": Comando para desinstalar um pacote 
 
+--------------------------
+
 - "node_modules": São os arquivos de outros pacotes necessários para a instalação do pacote principal
 - "Package-lock.json": Versão de todos os pacotes que foram instalados através de algum pacote principal
 - "Package.json": Funciona como a carteira de identidade do projeto
+
+---------------------------
 
 - Para que serve o ROUTER do express?
         Para separar um conjunto de rotas em um arquivo separado com rotas do mesmo end-point
@@ -70,7 +78,9 @@
 
 - Como utilizar parâmetros de Url?
         São valores dinâmicos dentro da rota.
+
         Exemplo: 
+
                 /users/5 - *Aqui o 5 é um parâmetro*
                 
 
