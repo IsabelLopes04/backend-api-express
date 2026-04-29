@@ -90,7 +90,7 @@
                 Um padrão de projetos que cria um fluxo de execuções de funções, onde cada funcao e representada por um midle, e um midlle executa uma determinada responsabilidade e passa para o proximo middle
                         *Passport.js - Middle padrao para autenticação, suportando login, com redes sociais, JWT ou usuário/senha*
 
----------------------
+------ Próximos Tópicos
 
 - Validação de Dados
 - Tratamento de Erros 
