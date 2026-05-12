@@ -2,7 +2,7 @@ import express from 'express'
 import {getPubliController} from '../controllers/publication/getPubliControllers.js'
 import {createPubliController} from '../controllers/publication/createPubliController.js'
 import {updatePubliController} from '../controllers/publication/updatePubliController.js'
-import {patchPubliController} from '../controllers/publication/patchPubliController.js'
+import {patchPubliTitleController} from '../controllers/publication/patchPubliTitleController.js'
 import {deletePubliController} from '../controllers/publication/deletePubliController.js'
 
 const router = express.Router() 
