@@ -1,11 +1,11 @@
-import { getPubli } from "../../models/publicationModel.js"
+import { getPublications } from "../../models/publicationModel.js"
 
-export async function  getPubliController(req, res){
+export async function getPubliController(req, res){
 
-const  result = await getPubli()
+    const result = await getPublications()
 
     res.json({
-        Message: "Usuarios listados com sucesso!",
-        publication: result
+        message: "Publicações listadas com sucesso", 
+        publications: result
     })
 }

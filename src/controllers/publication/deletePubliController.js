@@ -1,15 +1,21 @@
- import { deletePubli } from "../../models/publicationModel.js"
+import { deletePublication, validatePublication } from "../../models/publicationModel.js";
 
- export async function deletePubliController(req, res){
+export async function deletePubliController(req, res){
+    const id = req.params.id
 
-     const id = req.params.id
-         
-     
-         const result = await deletePubli(+id) // operador "+" para converter String para number 
-     
-         return res.json ({
-             message: "Publication deletado com sucesso!",
-             publication: result
-         })
-     
- }
+    const {success, error, data} = validatePublication({id: +id}, {title: true, description: true, author: true})
+
+    if(!success){
+        return res.status(400).json({
+            message: "Erro de validação",
+            fieldErrors: error
+        })
+    }
+
+    const result = await deletePublication(data.id) 
+
+    return res.json({
+        message: "Publicação deletada com sucesso!",
+        publication: result
+    })
+}

@@ -1,22 +1,21 @@
-import { createUser, validatedUser} from "../../models/userModel.js"
- 
- export async function createUserController(req, res){
+import { createUser, validateUser  } from "../../models/userModel.js"
 
-   const user = req.body
+export async function createUsersController(req, res){
+    const user = req.body
 
-   const {success, error, data} = validatedUser(user, {id:true})
+    const {success, error, data} = validateUser(user, {id: true})
 
-   if(!success){
-      return res.status(400).json({
-         message: "Erro de validação",
-         fieldErrors: error.flatten().fieldErrors
-      })
-   }
+    if(!success){
+        return res.status(400).json({
+            message: "Erro de validação",
+            fieldErrors: error
+        })
+    }
 
-   const result = await createUser(user)
+    const result = await createUser(data)
 
-   res.json ({
-        message: "Usuario criado com sucesso",
+    res.json({
+        message: "Usuário criado com sucesso!",
         user: result
-   })
- }
+    })
+}
