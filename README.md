@@ -92,8 +92,14 @@
 
 ------ Próximos Tópicos
 
-- Validação de Dados
+- Validação de Dados com Zod
+        - Para que serve a biblioteca do Zod?
+        - Para que serve a função Partial?
+        - Qual a diferença do parse para o safeParse?
 - Tratamento de Erros 
+        - Qual o papel do ErrorHandler?
+        - Quais erros devem ser tratados pelo ErrorHandler e quais devem ser tratados no try catch do controller?
+        - Quais os parametros de entrada de um middleware de ErrorHandler?
 - Autenticação com JWT
 
 ### Comandos do Prisma 
