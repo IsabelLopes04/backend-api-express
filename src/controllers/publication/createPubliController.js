@@ -1,6 +1,7 @@
 import { createPublication, validatePublication  } from "../../models/publicationModel.js"
 
 export async function createPubliController(req, res){
+    
     const publication = req.body
 
     const {success, error, data} = validatePublication(publication, {id: true})

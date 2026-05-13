@@ -17,7 +17,7 @@ model user {
 
 model publication {
   id            Int     @id @default(autoincrement())
-  title         String  @db.VarChar(500)
+  title         String  @db.VarChar(255)
   description   String  @db.Text
   author        String  @db.VarChar(255)
  

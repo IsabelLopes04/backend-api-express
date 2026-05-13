@@ -1,21 +1,34 @@
 import { createUser, validateUser  } from "../../models/userModel.js"
 
-export async function createUsersController(req, res){
-    const user = req.body
+export async function createUsersController(req, res, next){
 
-    const {success, error, data} = validateUser(user, {id: true})
+    try{
+        const user = req.body
 
-    if(!success){
-        return res.status(400).json({
-            message: "Erro de validação",
-            fieldErrors: error
+        const {success, error, data} = validateUser(user, {id: true})
+
+        if(!success){
+            return res.status(400).json({
+                message: "Erro de validação",
+                fieldErrors: error
         })
     }
+        const result = await createUser(data)
 
-    const result = await createUser(data)
-
-    res.json({
-        message: "Usuário criado com sucesso!",
-        user: result
-    })
+        res.json({
+            message: "Usuário criado com sucesso!",
+            user: result
+        })
+    }catch(error){
+        if(error.code === 'P2002' && error.message.includes("email")){
+            console.log(error)
+                return res.status(400).json({
+                    message: "Erro de validação",
+                    fieldErrors: {
+                        email: ["O email já está em uso por outro usuário"]
+                    }
+                })
+        }
+        next(error)
+    }
 }
