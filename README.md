@@ -100,6 +100,9 @@
         - Qual o papel do ErrorHandler?
         - Quais erros devem ser tratados pelo ErrorHandler e quais devem ser tratados no try catch do controller?
         - Quais os parametros de entrada de um middleware de ErrorHandler?
+- Query Params (/user/?name=teste)
+        - Como capturar um parametro query da url no Controller?
+        - Para que são utilizadas em geral os query params?
 - Autenticação com JWT
 
 ### Comandos do Prisma 
