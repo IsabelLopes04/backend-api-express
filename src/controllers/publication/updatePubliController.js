@@ -26,7 +26,7 @@ export async function updatePubliController(req, res, next){
         if(error.code === 'P2025'){
             console.log(error)
             return res.status(404).json({
-                message: "Publicação não encontrada para ser deletada."
+                message: "Publicação não encontrada para ser atualizada."
             })
         }
         next(error)
