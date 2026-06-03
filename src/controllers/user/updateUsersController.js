@@ -1,10 +1,17 @@
 import { updateUser, validateUser } from "../../models/userModel.js";
+import bcrypt from "bcrypt";
 
 export async function updateUsersController(req, res, next){
     try {
         const {id} = req.params
         const user = req.body
         user.id = +id
+
+        if(req.userId !== user.id){
+            return res.status(403).json({
+                message: "Você não tem permissão para atualizar este usuário."
+            })
+        }
 
         const {success, error, data: userValidated} = validateUser(user)
 
@@ -13,6 +20,9 @@ export async function updateUsersController(req, res, next){
                 message: "Erro de validação",
                 fieldErrors: error
             })
+        }
+        if(user.pass){
+            userValidated.pass = await bcrypt.hash(userValidated.pass, 10)
         }
 
         const result = await updateUser(userValidated, userValidated.id)
@@ -23,7 +33,7 @@ export async function updateUsersController(req, res, next){
         })
     }catch(error){
         if(error.code === 'P2002' && error.message.includes("email")){
-            console.log(error)
+            console.log(error.message)
             return res.status(400).json({
                 message: "Erro de validação",
                 fieldErrors:{
@@ -32,7 +42,7 @@ export async function updateUsersController(req, res, next){
             })
         }
         if (error.code === 'P2025'){
-            console.log(error)
+            console.log(error.message)
             return res.status(404).json({
                 message: "Usuário não encontrado para ser atualizado."
             })

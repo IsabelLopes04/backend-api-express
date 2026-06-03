@@ -13,6 +13,7 @@ export async function createUsersController(req, res, next){
                 fieldErrors: error
         })
     }
+        data.pass = await bcrypt.hash(data.pass, 10)
         const result = await createUser(data)
 
         res.json({
