@@ -1,3 +1,27 @@
+# Backend API com Express
+
+Projeto de estudos desenvolvido durante as aulas de backend, com acompanhamento do professor.
+
+O objetivo é praticar a criação de uma API utilizando Node.js e Express, com gerenciamento de usuários, publicações e autenticação.
+
+## Tecnologias utilizadas
+
+- JavaScript
+- Node.js
+- Express
+- Prisma ORM
+- MySQL
+- Zod
+- JWT
+
+## Funcionalidades
+
+- Cadastro, consulta, edição e exclusão de usuários.
+- Gerenciamento de publicações.
+- Autenticação com JWT.
+- Validação de dados.
+- Middlewares para autenticação e tratamento de erros.
+
 # Tópicos Importantes
 
 - Qual linguagem de programação utilizada para o nosso Backend? 
